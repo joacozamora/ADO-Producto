@@ -1,0 +1,14 @@
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\WinformProducto1.exe.config
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\WinformProducto1.exe
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\WinformProducto1.pdb
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.AssemblyReference.cache
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.SuggestedBindingRedirects.cache
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.Properties.Resources.resources
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.GenerateResource.cache
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.CoreCompileInputs.cache
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.exe
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.pdb
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\Entidades.dll
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\Entidades.pdb
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.FormProductos.resources
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.CopyComplete

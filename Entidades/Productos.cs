@@ -12,6 +12,7 @@ namespace Entidades
     {
         #region Atributos
         private string Nombre;
+        private int Codigo;
         private int Precio;
         private string Genero;
         
@@ -23,6 +24,13 @@ namespace Entidades
         {
             set { Precio = value; }
             get { return Precio; }
+
+        }
+
+        public int d_codigo
+        {
+            set { Codigo = value; }
+            get { return Codigo; }
 
         }
 
@@ -44,11 +52,12 @@ namespace Entidades
         public Productos()
         {
         }
-        public Productos(string nom , int prec)
+        public Productos(string nom , int cod, int prec, string gen)
         {
             Nombre = nom;
+            Codigo = cod;
             Precio = prec;
-            Genero = "";
+            Genero = gen;
             
         }
         #endregion
@@ -61,11 +70,10 @@ namespace Entidades
 
         }
 
-        public string CargarDescuento (int descuento, int precTotal) 
+        public string CargarDescuento (int descuento) 
         {
-            int resta = precTotal - descuento;
-            return resta.ToString();
-            
+            Precio = (descuento*d_precio)/100;
+            return Precio.ToString();
             
         
         }

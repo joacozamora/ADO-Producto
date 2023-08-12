@@ -34,10 +34,14 @@
             this.btn_cargar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txb_Cod = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txb_Precio = new System.Windows.Forms.TextBox();
             this.txb_Genero = new System.Windows.Forms.TextBox();
             this.txb_Nombre = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lbl_Codigo = new System.Windows.Forms.Label();
+            this.btn_aplicar = new System.Windows.Forms.Button();
             this.lbl_Genero = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,10 +49,11 @@
             this.txb_cambionomb = new System.Windows.Forms.TextBox();
             this.lbl_NombreFinal = new System.Windows.Forms.Label();
             this.lbl_PrecioFinal = new System.Windows.Forms.Label();
-            this.btn_aplicar = new System.Windows.Forms.Button();
+            this.Dgv_Revistas = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Revistas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 87);
+            this.label2.Location = new System.Drawing.Point(45, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
@@ -72,7 +77,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 145);
+            this.label3.Location = new System.Drawing.Point(45, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
@@ -92,14 +97,16 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(45, 25);
+            this.tabControl1.Location = new System.Drawing.Point(44, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(641, 381);
+            this.tabControl1.Size = new System.Drawing.Size(641, 255);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.txb_Cod);
+            this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txb_Precio);
             this.tabPage1.Controls.Add(this.txb_Genero);
             this.tabPage1.Controls.Add(this.txb_Nombre);
@@ -110,21 +117,37 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(633, 355);
+            this.tabPage1.Size = new System.Drawing.Size(633, 229);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Carga de Productos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // txb_Cod
+            // 
+            this.txb_Cod.Location = new System.Drawing.Point(130, 87);
+            this.txb_Cod.Name = "txb_Cod";
+            this.txb_Cod.Size = new System.Drawing.Size(100, 20);
+            this.txb_Cod.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(45, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Codigo";
+            // 
             // txb_Precio
             // 
-            this.txb_Precio.Location = new System.Drawing.Point(130, 87);
+            this.txb_Precio.Location = new System.Drawing.Point(130, 136);
             this.txb_Precio.Name = "txb_Precio";
             this.txb_Precio.Size = new System.Drawing.Size(100, 20);
             this.txb_Precio.TabIndex = 6;
             // 
             // txb_Genero
             // 
-            this.txb_Genero.Location = new System.Drawing.Point(130, 142);
+            this.txb_Genero.Location = new System.Drawing.Point(130, 181);
             this.txb_Genero.Name = "txb_Genero";
             this.txb_Genero.Size = new System.Drawing.Size(100, 20);
             this.txb_Genero.TabIndex = 5;
@@ -138,6 +161,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.lbl_Codigo);
             this.tabPage2.Controls.Add(this.btn_aplicar);
             this.tabPage2.Controls.Add(this.lbl_Genero);
             this.tabPage2.Controls.Add(this.label5);
@@ -149,24 +173,43 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(633, 355);
+            this.tabPage2.Size = new System.Drawing.Size(633, 229);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Movimiento de Productos";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lbl_Codigo
+            // 
+            this.lbl_Codigo.AutoSize = true;
+            this.lbl_Codigo.Location = new System.Drawing.Point(58, 55);
+            this.lbl_Codigo.Name = "lbl_Codigo";
+            this.lbl_Codigo.Size = new System.Drawing.Size(97, 13);
+            this.lbl_Codigo.TabIndex = 8;
+            this.lbl_Codigo.Text = "Código no cargado";
+            // 
+            // btn_aplicar
+            // 
+            this.btn_aplicar.Location = new System.Drawing.Point(324, 143);
+            this.btn_aplicar.Name = "btn_aplicar";
+            this.btn_aplicar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aplicar.TabIndex = 7;
+            this.btn_aplicar.Text = "Aplicar";
+            this.btn_aplicar.UseVisualStyleBackColor = true;
+            this.btn_aplicar.Click += new System.EventHandler(this.btn_aplicar_Click);
+            // 
             // lbl_Genero
             // 
             this.lbl_Genero.AutoSize = true;
-            this.lbl_Genero.Location = new System.Drawing.Point(58, 87);
+            this.lbl_Genero.Location = new System.Drawing.Point(58, 111);
             this.lbl_Genero.Name = "lbl_Genero";
-            this.lbl_Genero.Size = new System.Drawing.Size(35, 13);
+            this.lbl_Genero.Size = new System.Drawing.Size(99, 13);
             this.lbl_Genero.TabIndex = 6;
-            this.lbl_Genero.Text = "label4";
+            this.lbl_Genero.Text = "Genero no cargado";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(58, 168);
+            this.label5.Location = new System.Drawing.Point(51, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 5;
@@ -175,7 +218,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 121);
+            this.label4.Location = new System.Drawing.Point(51, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 4;
@@ -183,14 +226,15 @@
             // 
             // txb_descuento
             // 
-            this.txb_descuento.Location = new System.Drawing.Point(173, 165);
+            this.txb_descuento.Location = new System.Drawing.Point(166, 193);
+            this.txb_descuento.MaxLength = 100;
             this.txb_descuento.Name = "txb_descuento";
             this.txb_descuento.Size = new System.Drawing.Size(100, 20);
             this.txb_descuento.TabIndex = 3;
             // 
             // txb_cambionomb
             // 
-            this.txb_cambionomb.Location = new System.Drawing.Point(173, 118);
+            this.txb_cambionomb.Location = new System.Drawing.Point(166, 146);
             this.txb_cambionomb.Name = "txb_cambionomb";
             this.txb_cambionomb.Size = new System.Drawing.Size(100, 20);
             this.txb_cambionomb.TabIndex = 2;
@@ -200,34 +244,33 @@
             this.lbl_NombreFinal.AutoSize = true;
             this.lbl_NombreFinal.Location = new System.Drawing.Point(58, 23);
             this.lbl_NombreFinal.Name = "lbl_NombreFinal";
-            this.lbl_NombreFinal.Size = new System.Drawing.Size(35, 13);
+            this.lbl_NombreFinal.Size = new System.Drawing.Size(101, 13);
             this.lbl_NombreFinal.TabIndex = 1;
-            this.lbl_NombreFinal.Text = "label4";
+            this.lbl_NombreFinal.Text = "Nombre no cargado";
             // 
             // lbl_PrecioFinal
             // 
             this.lbl_PrecioFinal.AutoSize = true;
-            this.lbl_PrecioFinal.Location = new System.Drawing.Point(58, 55);
+            this.lbl_PrecioFinal.Location = new System.Drawing.Point(58, 84);
             this.lbl_PrecioFinal.Name = "lbl_PrecioFinal";
-            this.lbl_PrecioFinal.Size = new System.Drawing.Size(35, 13);
+            this.lbl_PrecioFinal.Size = new System.Drawing.Size(94, 13);
             this.lbl_PrecioFinal.TabIndex = 0;
-            this.lbl_PrecioFinal.Text = "label4";
+            this.lbl_PrecioFinal.Text = "Precio no cargado";
             // 
-            // btn_aplicar
+            // Dgv_Revistas
             // 
-            this.btn_aplicar.Location = new System.Drawing.Point(324, 143);
-            this.btn_aplicar.Name = "btn_aplicar";
-            this.btn_aplicar.Size = new System.Drawing.Size(75, 23);
-            this.btn_aplicar.TabIndex = 7;
-            this.btn_aplicar.Text = "button1";
-            this.btn_aplicar.UseVisualStyleBackColor = true;
-            this.btn_aplicar.Click += new System.EventHandler(this.btn_aplicar_Click);
+            this.Dgv_Revistas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_Revistas.Location = new System.Drawing.Point(48, 288);
+            this.Dgv_Revistas.Name = "Dgv_Revistas";
+            this.Dgv_Revistas.Size = new System.Drawing.Size(633, 150);
+            this.Dgv_Revistas.TabIndex = 9;
             // 
             // FormProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Dgv_Revistas);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormProductos";
             this.Text = "FormProductos";
@@ -236,6 +279,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_Revistas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +304,9 @@
         private System.Windows.Forms.TextBox txb_cambionomb;
         private System.Windows.Forms.Label lbl_Genero;
         private System.Windows.Forms.Button btn_aplicar;
+        private System.Windows.Forms.TextBox txb_Cod;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbl_Codigo;
+        private System.Windows.Forms.DataGridView Dgv_Revistas;
     }
 }

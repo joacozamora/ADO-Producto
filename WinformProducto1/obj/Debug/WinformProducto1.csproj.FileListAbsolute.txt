@@ -12,3 +12,7 @@ C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\
 C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\Entidades.pdb
 C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.FormProductos.resources
 C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\obj\Debug\WinformProducto1.csproj.CopyComplete
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\CapaNegocios.dll
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\CapaDatos.dll
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\CapaNegocios.pdb
+C:\Users\joaco\OneDrive\Escritorio\VS2023\WinformProducto1\WinformProducto1\bin\Debug\CapaDatos.pdb

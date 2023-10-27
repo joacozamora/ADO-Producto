@@ -40,8 +40,9 @@
             this.txb_Genero = new System.Windows.Forms.TextBox();
             this.txb_Nombre = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txb_EliminarProducto = new System.Windows.Forms.TextBox();
+            this.btn_borrar = new System.Windows.Forms.Button();
             this.lbl_Codigo = new System.Windows.Forms.Label();
-            this.btn_aplicar = new System.Windows.Forms.Button();
             this.lbl_Genero = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +51,7 @@
             this.lbl_NombreFinal = new System.Windows.Forms.Label();
             this.lbl_PrecioFinal = new System.Windows.Forms.Label();
             this.Dgv_Revistas = new System.Windows.Forms.DataGridView();
+            this.btn_aplicar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -105,6 +107,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btn_aplicar);
             this.tabPage1.Controls.Add(this.txb_Cod);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.txb_Precio);
@@ -161,8 +164,9 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txb_EliminarProducto);
+            this.tabPage2.Controls.Add(this.btn_borrar);
             this.tabPage2.Controls.Add(this.lbl_Codigo);
-            this.tabPage2.Controls.Add(this.btn_aplicar);
             this.tabPage2.Controls.Add(this.lbl_Genero);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label4);
@@ -178,6 +182,23 @@
             this.tabPage2.Text = "Movimiento de Productos";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // txb_EliminarProducto
+            // 
+            this.txb_EliminarProducto.Location = new System.Drawing.Point(324, 196);
+            this.txb_EliminarProducto.Name = "txb_EliminarProducto";
+            this.txb_EliminarProducto.Size = new System.Drawing.Size(100, 20);
+            this.txb_EliminarProducto.TabIndex = 10;
+            // 
+            // btn_borrar
+            // 
+            this.btn_borrar.Location = new System.Drawing.Point(451, 196);
+            this.btn_borrar.Name = "btn_borrar";
+            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar.TabIndex = 9;
+            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.UseVisualStyleBackColor = true;
+            this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
+            // 
             // lbl_Codigo
             // 
             this.lbl_Codigo.AutoSize = true;
@@ -186,16 +207,6 @@
             this.lbl_Codigo.Size = new System.Drawing.Size(97, 13);
             this.lbl_Codigo.TabIndex = 8;
             this.lbl_Codigo.Text = "Código no cargado";
-            // 
-            // btn_aplicar
-            // 
-            this.btn_aplicar.Location = new System.Drawing.Point(324, 143);
-            this.btn_aplicar.Name = "btn_aplicar";
-            this.btn_aplicar.Size = new System.Drawing.Size(75, 23);
-            this.btn_aplicar.TabIndex = 7;
-            this.btn_aplicar.Text = "Aplicar";
-            this.btn_aplicar.UseVisualStyleBackColor = true;
-            this.btn_aplicar.Click += new System.EventHandler(this.btn_aplicar_Click);
             // 
             // lbl_Genero
             // 
@@ -209,7 +220,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 196);
+            this.label5.Location = new System.Drawing.Point(339, 55);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 5;
@@ -218,7 +229,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(51, 149);
+            this.label4.Location = new System.Drawing.Point(339, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 4;
@@ -226,7 +237,7 @@
             // 
             // txb_descuento
             // 
-            this.txb_descuento.Location = new System.Drawing.Point(166, 193);
+            this.txb_descuento.Location = new System.Drawing.Point(426, 55);
             this.txb_descuento.MaxLength = 100;
             this.txb_descuento.Name = "txb_descuento";
             this.txb_descuento.Size = new System.Drawing.Size(100, 20);
@@ -234,7 +245,7 @@
             // 
             // txb_cambionomb
             // 
-            this.txb_cambionomb.Location = new System.Drawing.Point(166, 146);
+            this.txb_cambionomb.Location = new System.Drawing.Point(430, 20);
             this.txb_cambionomb.Name = "txb_cambionomb";
             this.txb_cambionomb.Size = new System.Drawing.Size(100, 20);
             this.txb_cambionomb.TabIndex = 2;
@@ -264,6 +275,16 @@
             this.Dgv_Revistas.Name = "Dgv_Revistas";
             this.Dgv_Revistas.Size = new System.Drawing.Size(633, 150);
             this.Dgv_Revistas.TabIndex = 9;
+            // 
+            // btn_aplicar
+            // 
+            this.btn_aplicar.Location = new System.Drawing.Point(300, 134);
+            this.btn_aplicar.Name = "btn_aplicar";
+            this.btn_aplicar.Size = new System.Drawing.Size(75, 23);
+            this.btn_aplicar.TabIndex = 9;
+            this.btn_aplicar.Text = "Modificar";
+            this.btn_aplicar.UseVisualStyleBackColor = true;
+            this.btn_aplicar.Click += new System.EventHandler(this.btn_aplicar_Click_1);
             // 
             // FormProductos
             // 
@@ -303,10 +324,12 @@
         private System.Windows.Forms.TextBox txb_descuento;
         private System.Windows.Forms.TextBox txb_cambionomb;
         private System.Windows.Forms.Label lbl_Genero;
-        private System.Windows.Forms.Button btn_aplicar;
         private System.Windows.Forms.TextBox txb_Cod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbl_Codigo;
         private System.Windows.Forms.DataGridView Dgv_Revistas;
+        private System.Windows.Forms.Button btn_borrar;
+        private System.Windows.Forms.TextBox txb_EliminarProducto;
+        private System.Windows.Forms.Button btn_aplicar;
     }
 }

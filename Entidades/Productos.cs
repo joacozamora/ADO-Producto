@@ -47,6 +47,11 @@ namespace Entidades
             get { return Genero; }
         }
 
+        public object V { get; }
+        public object Value1 { get; }
+        public object Value2 { get; }
+        public object Value3 { get; }
+
         #endregion
         #region Constructores
         public Productos()
@@ -59,6 +64,14 @@ namespace Entidades
             Precio = prec;
             Genero = gen;
             
+        }
+
+        public Productos(object v, object value1, object value2, object value3)
+        {
+            V = v;
+            Value1 = value1;
+            Value2 = value2;
+            Value3 = value3;
         }
         #endregion
 

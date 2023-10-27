@@ -22,5 +22,10 @@ namespace CapaNegocios
         {
             return DatosObjProducto.listadoProductos(cual);
         }
+
+        public DataSet ListarProductoEliminar(string id)
+        {
+            return DatosObjProducto.ListarProductoEliminar(id);
+        }
     }
 }
